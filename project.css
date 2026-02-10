@@ -1,0 +1,216 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+/* HEADER WITH ANIMATION */
+header {
+    background: linear-gradient(90deg, #000, #330000, #990000, #000);
+    background-size: 300% 300%;
+    animation: headerMove 8s infinite alternate;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #cc0000;
+}
+
+@keyframes headerMove {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 50%; }
+}
+
+.logo-img {
+    width: 280px;
+}
+
+/* NAVIGATION */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff3333;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* HOME */
+.home-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.home-container img {
+    width: 430px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff000077;
+}
+
+/* SECTION HEADERS */
+.section h2, #contact h1 {
+    color: #ff3333;
+    text-shadow: 0 0 5px red;
+}
+
+/* GRID SECTIONS */
+.section {
+    padding: 40px;
+    text-align: center;
+    background: #111;
+}
+
+.grid-3, .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* CARD STYLING */
+.card, .cover-card {
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #440000;
+    box-shadow: 0 0 15px #990000;
+}
+
+.card img, .cover-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid #660000;
+    border-radius: 5px;
+}
+
+/* BUTTON PULSE ANIMATION */
+button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    background: #cc0000;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+
+button:hover {
+    background: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, #ff000055, transparent);
+    opacity: 0;
+    transition: .4s;
+}
+
+button:hover::after {
+    opacity: 1;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CONTACT ICONS */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.contact-icons img {
+    border-radius: 50%;
+    padding: 5px;
+    background: #000;
+    border: 2px solid #ff0000;
+    transition: .3s;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 15px #ff0000;
+}
+
+/* IMAGE RED GLOW HOVER */
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff0000cc;
+    transition: 0.4s;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: .8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #000;
+    color: #ff3333;
+    border-top: 3px solid #cc0000;
+}
+/* SHOP NOW BUTTON */
+.shop-btn {
+    display: inline-block;
+    background: #cc0000;    /* Red */
+    color: #ffffff;         /* White text */
+    padding: 12px 28px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 2px solid #000;  /* Black border */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px #ff000066;
+}
+
+.shop-btn:hover {
+    background: #000000;     /* Black */
+    color: #ff0000;          /* Red text */
+    border-color: #ff0000;
+    transform: scale(1.07);
+    box-shadow: 0 0 20px #ff0000aa;
+}
+
